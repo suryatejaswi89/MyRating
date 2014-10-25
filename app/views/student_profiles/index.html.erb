@@ -1,0 +1,37 @@
+<h1>Listing student_profiles</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Fname</th>
+      <th>Lname</th>
+      <th>School</th>
+      <th>Department</th>
+      <th>Level</th>
+      <th>Year</th>
+      <th>Email</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @student_profiles.each do |student_profile| %>
+      <tr>
+        <td><%= student_profile.Fname %></td>
+        <td><%= student_profile.Lname %></td>
+        <td><%= student_profile.School %></td>
+        <td><%= student_profile.Department %></td>
+        <td><%= student_profile.level %></td>
+        <td><%= student_profile.year %></td>
+        <td><%= student_profile.email %></td>
+        <td><%= link_to 'Show', student_profile %></td>
+        <td><%= link_to 'Edit', edit_student_profile_path(student_profile) %></td>
+        <td><%= link_to 'Destroy', student_profile, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Student profile', new_student_profile_path %>

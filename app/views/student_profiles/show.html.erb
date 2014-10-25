@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Fname:</strong>
+  <%= @student_profile.Fname %>
+</p>
+
+<p>
+  <strong>Lname:</strong>
+  <%= @student_profile.Lname %>
+</p>
+
+<p>
+  <strong>School:</strong>
+  <%= @student_profile.School %>
+</p>
+
+<p>
+  <strong>Department:</strong>
+  <%= @student_profile.Department %>
+</p>
+
+<p>
+  <strong>Level:</strong>
+  <%= @student_profile.level %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @student_profile.year %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @student_profile.email %>
+</p>
+
+<%= link_to 'Edit', edit_student_profile_path(@student_profile) %> |
+<%= link_to 'Back', student_profiles_path %>
